@@ -1,3 +1,6 @@
+package buiders;
+import componente.Sasiu;
+
 public class IMC {
     public Sasiu buildMonarch(){
         return new Sasiu(220, 5, 60);

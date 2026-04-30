@@ -1,3 +1,5 @@
+package buiders;
+
 import java.util.Random;
 
 import static java.lang.Integer.max;
@@ -5,21 +7,21 @@ import static java.lang.Integer.min;
 import static java.lang.Math.sqrt;
 
 public class MapGenerator {
-    private final int SIZE = 50;
-    private Random rand = new Random();
-    private int vizibilitate[][] = new int[SIZE][SIZE], mobilitate[][] = new int[SIZE][SIZE];
+    private static final int SIZE = 50;
+    private static Random rand = new Random();
+    private static int vizibilitate[][] = new int[SIZE][SIZE], mobilitate[][] = new int[SIZE][SIZE];
 
-    final String RESET = "\u001B[0m";
+    final static String RESET = "\u001B[0m";
 
-    final String BG_BRIGHT_GREEN = "\u001B[102m";
+    final static String BG_BRIGHT_GREEN = "\u001B[102m";
 
-    final String BG_BLUE = "\u001B[44m";
-    final String BG_BROWN = "\u001B[48;5;94m";
+    final static String BG_BLUE = "\u001B[44m";
+    final static String BG_BROWN = "\u001B[48;5;94m";
 
-    final String BG_BLACK = "\u001B[40m";
-    final String BG_DEFAULT = "\u001B[47m";
+    final static String BG_BLACK = "\u001B[40m";
+    final static String BG_DEFAULT = "\u001B[47m";
 
-    public void generateMap(){
+    public static void generateMap(){
         for (int x = 0; x < SIZE; x++) {
             for (int y = 0; y < SIZE; y++) {
                 vizibilitate[x][y] = 100;
@@ -96,7 +98,7 @@ public class MapGenerator {
 
     }
 
-    char symbol(int t) {
+    static char symbol(int t) {
         return switch (t) {
             case 0 -> 'X';
             case 106 -> ' ';
@@ -107,7 +109,7 @@ public class MapGenerator {
         };
     }
 
-    public void printColoredMap() {
+    public static void printColoredMap() {
 
         for (int y = 0; y < SIZE; y++) {
             for (int x = 0; x < SIZE; x++) {
@@ -122,7 +124,7 @@ public class MapGenerator {
         }
     }
 
-    String getColor(int tile) {
+    static String getColor(int tile) {
         return switch (tile) {
             case 106 -> BG_DEFAULT;
             case 110 -> BG_BROWN;
@@ -131,5 +133,9 @@ public class MapGenerator {
             case 0 -> BG_BLACK;
             default -> RESET;
         };
+    }
+
+    static public int getVizibilitateInXY(int x, int y) {
+        return vizibilitate[x][y];
     }
 }

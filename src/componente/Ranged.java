@@ -1,10 +1,12 @@
+package componente;
+
 import java.util.Random;
 
 public class Ranged implements Arma{
     private final int daune, atacuri, minRange, maxRange, precizie;
     private final boolean douaMiani;
 
-    Ranged(int daune, int atacuri, int minRange, int maxRange, int precize, boolean douaMiani){
+    public Ranged(int daune, int atacuri, int minRange, int maxRange, int precize, boolean douaMiani){
         this.daune = daune;
         this.atacuri = atacuri;
         this.minRange = minRange;

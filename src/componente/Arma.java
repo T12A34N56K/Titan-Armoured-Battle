@@ -1,3 +1,5 @@
+package componente;
+
 public interface Arma {
     int atac(Titan inamic);
 

@@ -1,3 +1,10 @@
+package joc;
+
+import buiders.IMC;
+import buiders.MisriahArmoury;
+import buiders.RHE;
+import componente.Titan;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -13,8 +20,9 @@ public class Jucator {
         return instanta;
     }
 
-    List<Squad> echipe = new ArrayList<>();
-    int alesi;
+    private List<Squad> echipe = new ArrayList<>();
+    private int alesi;
+    private Squad inJoc;
 
     public void alegeEchipa() {
         if (echipe.isEmpty()){
@@ -59,7 +67,7 @@ public class Jucator {
         MisriahArmoury MA = new MisriahArmoury();
 
         while (true) {
-            System.out.println("Care Titan vrei sa il schimbi?\n");
+            System.out.println("Care componente.Titan vrei sa il schimbi?\n");
 
             System.out.println(echipe.get(pos));
 
@@ -269,5 +277,17 @@ public class Jucator {
         }
 
         return raspuns;
+    }
+
+    public void incepeJoc(){
+        try {
+            inJoc = (Squad) echipe.get(alesi).clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Squad getInJoc() {
+        return inJoc;
     }
 }

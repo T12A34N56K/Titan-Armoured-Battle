@@ -1,3 +1,7 @@
+package joc;
+
+import componente.Titan;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,5 +43,10 @@ public class Squad {
         }
 
         return raspuns;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

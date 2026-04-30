@@ -1,9 +1,11 @@
+package componente;
+
 public class Titan {
     private Sasiu sasiu;
     private Arma manaStanga, manaDreapta;
     private Utilitate utilitateStanga, utilitateDreapta;
 
-    Titan(){
+    public Titan(){
         sasiu = null;
         manaDreapta = null;
         manaStanga = null;
@@ -21,7 +23,7 @@ public class Titan {
 
     @Override
     public String toString() {
-        return "Titan:\n Sasiu: " + sasiu + "\n Arma Mana Stanga: " + manaStanga + "\n Arma Mana Dreapta: " + manaDreapta + "\n Umar Stang: " + utilitateStanga + "\n Umar Drept: " + utilitateDreapta;
+        return "componente.Titan:\n componente.Sasiu: " + sasiu + "\n componente.Arma Mana Stanga: " + manaStanga + "\n componente.Arma Mana Dreapta: " + manaDreapta + "\n Umar Stang: " + utilitateStanga + "\n Umar Drept: " + utilitateDreapta;
     }
 
     public void setSasiu(Sasiu sasiu) {

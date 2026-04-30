@@ -1,10 +1,12 @@
+package componente;
+
 import java.util.Random;
 
 public class Melee implements Arma{
     private final int daune, atacuri, precizie;
     private final boolean douaMaini;
 
-    Melee(int daune, int atacuri, int precizie, boolean douaMaini){
+    public Melee(int daune, int atacuri, int precizie, boolean douaMaini){
         this.daune = daune;
         this.atacuri = atacuri;
         this.precizie = precizie;

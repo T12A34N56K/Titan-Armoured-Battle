@@ -1,8 +1,10 @@
+package componente;
+
 public class Scut implements Utilitate{
     protected int ramas, asteptare;
     protected final int viata, reincarcare;
 
-    Scut(int viata, int reincarcare){
+    public Scut(int viata, int reincarcare){
         this.viata = viata;
         ramas = viata;
         this.reincarcare = reincarcare;
@@ -39,7 +41,7 @@ public class Scut implements Utilitate{
 
     @Override
     public String toString() {
-        return "Scut. Rezistenta: " + viata + " Regenerare: " + reincarcare;
+        return "componente.Scut. Rezistenta: " + viata + " Regenerare: " + reincarcare;
     }
 
     @Override

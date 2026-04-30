@@ -1,7 +1,9 @@
+package componente;
+
 public class Sasiu {
     private int viata, viteza, optica;
 
-    Sasiu(int viata, int viteza, int optica){
+    public Sasiu(int viata, int viteza, int optica){
         this.viata = viata;
         this.viteza = viteza;
         this.optica = optica;
@@ -14,7 +16,7 @@ public class Sasiu {
 
     @Override
     public String toString() {
-        return "Sasiu: " + viata + "hp, " + viteza + "m, " + optica + "m";
+        return "componente.Sasiu: " + viata + "hp, " + viteza + "m, " + optica + "m";
     }
 
     @Override

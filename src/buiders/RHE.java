@@ -1,3 +1,8 @@
+package buiders;
+
+import componente.Titan;
+import componente.Ofensiv;
+import componente.Scut;
 import java.util.Random;
 
 public class RHE {
