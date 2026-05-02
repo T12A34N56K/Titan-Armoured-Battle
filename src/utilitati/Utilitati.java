@@ -21,7 +21,7 @@ public class Utilitati {
 
             for (int x = x1, y = y1; x - x2 != itt; x += itt) {
                 vizibilitateRamasa = (vizibilitateRamasa - 1) * getVizibilitateInXY(x, y) / 100;
-                System.out.printf("\033[%d;%dH", x, y);
+                System.out.printf("%d %d\n", x, y);
 
                 if (vizibilitateRamasa < 1){
                     return false;
@@ -43,7 +43,7 @@ public class Utilitati {
         } else {
             int m_new = 2 * abs(x2 - x1);
             int slope_error_new = m_new - 2 * abs(y2 - y1);
-            System.out.println("aici");
+
             if (y2 < y1) {
                 itt = -1;
             }
@@ -51,7 +51,7 @@ public class Utilitati {
             for (int x = x1, y = y1; y - y2 != itt; y += itt) {
                 vizibilitateRamasa = (vizibilitateRamasa - 1) * getVizibilitateInXY(x, y) / 100;
 
-                System.out.printf("\033[%d;%dH", x, y);
+                System.out.printf("%d %d\n", x*3, y);
 
                 if (vizibilitateRamasa < 1){
                     return false;

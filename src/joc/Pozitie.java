@@ -28,4 +28,14 @@ public class Pozitie {
     public int hashCode() {
         return Integer.hashCode(x * 100 + y);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return ((Pozitie) obj).getX() == this.x && ((Pozitie) obj).getY() == this.y;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y +')';
+    }
 }
